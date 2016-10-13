@@ -8,6 +8,17 @@
     #indent {
       margin-left: 30px;
     }
+    .invalid-field {
+        border: 1px solid red;
+    }
+
+    .prove{
+        margin-left: 30px;
+    }
+
+    .error-message {
+        color: red;
+    }
   </style>
 </head>
 <body>
@@ -15,13 +26,15 @@
 
     <form id="form-gif-request" />
         <label>What kind of Jackson 5 related gif do you want?</label>
-        <input name="tag" type="text" />
+        <input class="tag" name="tag" type="text" />
         <br /> <br />
         <label id="indent" >Prove you are not a robot by answering this riddle: </label>
         <br />
-        <input id="indent" name="prove" type="text" />
+        <input class="prove" name="prove" type="text" />
         <strong> Jacksons are better than one. </strong>
-        <br /> <br />
+        <br />
+        <p id="error" class="error-message"> </p>
+        <br />
         <input type="submit" value="Get my Gif!" />
     </form>
 
