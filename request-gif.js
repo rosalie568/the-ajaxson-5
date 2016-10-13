@@ -14,18 +14,18 @@ $(document).ready(function() {
  */
 function fetchAndDisplayGif(event) {
 
-    var valMessage = $('#prove').val();
-    console.log(valMessage);
+    // This prevents the form submission from doing what it normally does: send a request (which would cause our page to refresh).
+    // Because we will be making our own AJAX request, we dont need to send a normal request and we definitely don't want the page to refresh.
+    event.preventDefault();
 
     //clear gif error message
     $("#prove").removeClass("invalid-field");
     $(".error-message").html("");
 
-    if(valMessage == "Jacksons are better than one." ) {
+    //Get information that was entered in validation to make sure person is not a robot.
+    var valMessage = $('#prove').val();
 
-        // This prevents the form submission from doing what it normally does: send a request (which would cause our page to refresh).
-        // Because we will be making our own AJAX request, we dont need to send a normal request and we definitely don't want the page to refresh.
-        event.preventDefault();
+    if(valMessage == "5" ) {
 
         // get the user's input text from the DOM
         var searchQuery = $('.tag').val(); // TODO should be e.g. "dance"
