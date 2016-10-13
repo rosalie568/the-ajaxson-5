@@ -36,12 +36,12 @@ function fetchAndDisplayGif(event) {
 
             // jQuery passes us the `response` variable, a regular javascript object created from the JSON the server gave us
             console.log("we received a response!");
-            console.log(response.image_url);
+            console.log(response);
 
             // TODO
             // 1. set the source attribute of our image to the image_url of the GIF
             // 2. hide the feedback message and display the image
-            $('#gif').attr("src", response.image_url);
+            $('#gif').attr("src", response.data.image_url);
             setGifLoadedStatus(true);
         },
         error: function() {
