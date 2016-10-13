@@ -1,0 +1,18 @@
+#indent {
+  margin-left: 30px;
+}
+.invalid-field {
+    border: 1px solid red;
+}
+
+#prove{
+    margin-left: 30px;
+}
+
+#error{
+    margin-left: 30px;
+}
+
+.error-message {
+    color: red;
+}
