@@ -14,13 +14,14 @@ $(document).ready(function() {
  */
 function fetchAndDisplayGif(event) {
 
-    var valMessage = $('.prove').val();
+    var valMessage = $('#prove').val();
+    console.log(valMessage);
 
     //clear gif error message
     $("#prove").removeClass("invalid-field");
     $(".error-message").html("");
 
-    if(valMessage == "Jacksons are better than 1." ) {
+    if(valMessage == "Jacksons are better than one." ) {
 
         // This prevents the form submission from doing what it normally does: send a request (which would cause our page to refresh).
         // Because we will be making our own AJAX request, we dont need to send a normal request and we definitely don't want the page to refresh.
