@@ -27,6 +27,9 @@ function fetchAndDisplayGif(event) {
 
     if(valMessage == "5" ) {
 
+        //clear picture image
+        $('#gif').attr("src", "");
+
         // get the user's input text from the DOM
         var searchQuery = $('.tag').val(); // TODO should be e.g. "dance"
 
